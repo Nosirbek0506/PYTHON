@@ -158,7 +158,7 @@ guess=""
 while guess !=secret_word:   #guessing game
     guess=input("enter guess:") 
 print("you win")    
-"""
+
 secret_word = "giraffe"
 guess=""
 guess_count=0
@@ -175,4 +175,46 @@ while guess !=secret_word and not(out_of_guesses):
     else:
         print("you win")
 
+for i in "giraffe academy":
+    print(i)    
+
+for a in range(5):
+    if a==2:
+        print("aaa")
+    else:
+        print("bbb")    
     
+def raise_to_power (base_num , pow_num):
+    result=1
+    for index in range (pow_num):
+        result=result*base_num
+    return result
+print(raise_to_power(5,1))
+
+number= [[1,2,3],[4,5,6],[7,8,9]]    
+for a in number:
+    for i in number:
+        print(i)            
+
+try:
+    number=int(input("enter  a number:"))   
+    print(number)           
+except:
+    print('invalid object')  
+ 
+with open("customer.txt","w") as f:
+    f.write("Nosirbek\nAli\nVali")
+
+with open("customer.txt","r") as f:
+    print(f.read())     
+   
+with open("customer.txt","a") as f:
+    f.write("behruz\n,ali\n,nabi\n")
+
+aa=open("customer.txt","r")
+for i in aa.readlines():
+    print(i)
+
+""" 
+with open("index.html","w") as a:
+    a.write("<p>This is HTML<\p>")
