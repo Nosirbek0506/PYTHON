@@ -117,10 +117,10 @@ elif op =="*":
 
 else:
     print('invalid operator')    
-"""
+
 fname=input('enter your fname: ')
 op=input('enter operator: ')
-lname=input('enter your lname: ')
+lname=input('enter your lname:+')
 if op =="+":
     print(len(fname)+len(lname))
 elif op == "-":
@@ -132,4 +132,47 @@ elif op =="*":
 else:
     print("else")    
     
+   
+months={
+  "jan":"january",
+  "feb":"february",
+  "mar":"march",
+  "apr":"april",
+  "my":"may",
+  "jun":"june"
+ }   
+
+print(months["apr"])
+print(months.get("jun"))
+
+
+a=2
+while a<10:
+     a+=1
+     if a==7:
+          break # 7 ga yetganda to'xta
+     print (a)
+
+secret_word = "giraffe"
+guess=""
+while guess !=secret_word:   #guessing game
+    guess=input("enter guess:") 
+print("you win")    
+"""
+secret_word = "giraffe"
+guess=""
+guess_count=0
+guess_limit=3
+out_of_guesses=False
+while guess !=secret_word and not(out_of_guesses):
+    if guess_count<guess_limit:
+        guess=input("enter guess:") 
+        guess_count+=1
+    else:
+        out_of_guesses=True
+    if out_of_guesses:
+        print("out_of_guesses,YOU LOSE")
+    else:
+        print("you win")
+
     
