@@ -214,7 +214,38 @@ with open("customer.txt","a") as f:
 aa=open("customer.txt","r")
 for i in aa.readlines():
     print(i)
-
+ 
+class student:
+    def __init__(self, fakulteti, guruhi, GPA):
+        self.fakulteti = fakulteti
+        self.guruhi = guruhi
+        self.GPA = GPA
+talaba1=student("servis","irb",3)   
+talaba2=student("iqtisod","IK",5)
+print(talaba1.fakulteti)
 """ 
-with open("index.html","w") as a:
-    a.write("<p>This is HTML<\p>")
+question_prompts = [
+    "What color are apples?\n(a) Red/Green\n(b) Purple\n(c) Orange\n\n",
+    "What color are Bananas?\n(a) Teal\n(b) Magenta\n(c) Yellow\n\n",
+    "What color are strawberries?\n(a) Yellow\n(b) Red\n(c) Blue\n\n"
+]
+class Question:
+    def __init__(self,prompt,answer):
+        self.prompt=prompt
+        self.answer=answer
+
+questions=[
+    Question(question_prompts[0], "a"),
+    Question(question_prompts[1], "c"),
+    Question(question_prompts[2], "b")
+] 
+
+def run_test(questions):
+    score=0
+    for question in questions:
+        answer=input(question.prompt)
+        if answer==question.answer:
+            score += 1
+    print("you got "+ str(score)+"/"+str(len(questions))+"correct")  
+
+run_test(questions)            
