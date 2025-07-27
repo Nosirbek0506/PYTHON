@@ -1,2 +1,5 @@
-with open("excel.xlsx","w")as f:
-   f.write("nosirbek\n,nodirbek\n,odil\n")       
+rang = ["qora", "oq", "qizil"]
+mashina = ["Spark", "Nexia", "Lacetti"]
+for x in rang:
+    for y in mashina:
+        print(x,y)

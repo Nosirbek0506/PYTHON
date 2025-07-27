@@ -1,1 +1,44 @@
-<p>This is HTML<\p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Square Root Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Square Root Calculator</h2>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="calculateSquareRoot()">Find Square Root</button>
+    <div id="result"></div>
+
+    <script>
+        function calculateSquareRoot() {
+            let x = document.getElementById("numberInput").value;
+            if (x === "" || isNaN(x) || x < 0) {
+                document.getElementById("result").innerHTML = "Please enter a valid non-negative number.";
+            } else {
+                let y = Math.sqrt(parseFloat(x));
+                document.getElementById("result").innerHTML = `The square root of ${x} is ${y}`;
+            }
+        }
+    </script>
+</body>
+</html>
